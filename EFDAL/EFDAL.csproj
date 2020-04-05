@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D18CF87-7C9F-4343-8687-BD156E8A6586}</ProjectGuid>
+    <ProjectGuid>{33BE3022-739A-49B8-94EC-CB3B38DDED2E}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ADO.NET</RootNamespace>
-    <AssemblyName>ADO.NET</AssemblyName>
+    <RootNamespace>EFDAL</RootNamespace>
+    <AssemblyName>EFDAL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -55,21 +55,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADO\DAL.cs" />
-    <Compile Include="ADO\DbCategoryDAL.cs" />
-    <Compile Include="ADO\DbGoodsDAL.cs" />
-    <Compile Include="ADO\IDataGateway.cs" />
-    <Compile Include="ADO\SupplierDAL.cs" />
-    <Compile Include="ADO\UnitOfWork.cs" />
-    <Compile Include="Models\CategoryOfGoods.cs" />
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Configures\CategoryConfiguration.cs" />
+    <Compile Include="Configures\GoodConfiguration.cs" />
+    <Compile Include="Configures\SupplierConfiguration.cs" />
+    <Compile Include="Interfaces\IGenericRepository.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Good.cs" />
     <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

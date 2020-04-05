@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO.NET", "ADO.NET\ADO.NET.csproj", "{8D18CF87-7C9F-4343-8687-BD156E8A6586}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFDAL", "EFDAL\EFDAL.csproj", "{33BE3022-739A-49B8-94EC-CB3B38DDED2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{8460BEAC-8123-48BE-B9C1-3D187CE838FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8D18CF87-7C9F-4343-8687-BD156E8A6586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D18CF87-7C9F-4343-8687-BD156E8A6586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D18CF87-7C9F-4343-8687-BD156E8A6586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BE3022-739A-49B8-94EC-CB3B38DDED2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BE3022-739A-49B8-94EC-CB3B38DDED2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BE3022-739A-49B8-94EC-CB3B38DDED2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BE3022-739A-49B8-94EC-CB3B38DDED2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8460BEAC-8123-48BE-B9C1-3D187CE838FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8460BEAC-8123-48BE-B9C1-3D187CE838FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8460BEAC-8123-48BE-B9C1-3D187CE838FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8460BEAC-8123-48BE-B9C1-3D187CE838FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

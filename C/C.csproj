@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D18CF87-7C9F-4343-8687-BD156E8A6586}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>ADO.NET</RootNamespace>
-    <AssemblyName>ADO.NET</AssemblyName>
+    <ProjectGuid>{726C237C-E25F-4242-9FB7-967444490430}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>C</RootNamespace>
+    <AssemblyName>C</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,9 +34,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
@@ -47,6 +44,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,24 +54,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADO\DAL.cs" />
-    <Compile Include="ADO\DbCategoryDAL.cs" />
-    <Compile Include="ADO\DbGoodsDAL.cs" />
-    <Compile Include="ADO\IDataGateway.cs" />
-    <Compile Include="ADO\SupplierDAL.cs" />
-    <Compile Include="ADO\UnitOfWork.cs" />
-    <Compile Include="Models\CategoryOfGoods.cs" />
-    <Compile Include="Models\Good.cs" />
-    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ADO.NET\ADO.NET.csproj">
+      <Project>{8d18cf87-7c9f-4343-8687-bd156e8a6586}</Project>
+      <Name>ADO.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFDAL\EFDAL.csproj">
+      <Project>{33be3022-739a-49b8-94ec-cb3b38dded2e}</Project>
+      <Name>EFDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

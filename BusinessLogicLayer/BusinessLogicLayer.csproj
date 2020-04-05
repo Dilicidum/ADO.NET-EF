@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D18CF87-7C9F-4343-8687-BD156E8A6586}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>ADO.NET</RootNamespace>
-    <AssemblyName>ADO.NET</AssemblyName>
+    <ProjectGuid>{8460BEAC-8123-48BE-B9C1-3D187CE838FD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BusinessLogicLayer</RootNamespace>
+    <AssemblyName>BusinessLogicLayer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,10 +34,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -55,22 +55,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADO\DAL.cs" />
-    <Compile Include="ADO\DbCategoryDAL.cs" />
-    <Compile Include="ADO\DbGoodsDAL.cs" />
-    <Compile Include="ADO\IDataGateway.cs" />
-    <Compile Include="ADO\SupplierDAL.cs" />
-    <Compile Include="ADO\UnitOfWork.cs" />
-    <Compile Include="Models\CategoryOfGoods.cs" />
-    <Compile Include="Models\Good.cs" />
-    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Controlllers\DataController.cs" />
+    <Compile Include="Interfaces\IService.cs" />
+    <Compile Include="ModelsBO\CategoryBO.cs" />
+    <Compile Include="ModelsBO\GoodBO.cs" />
+    <Compile Include="ModelsBO\SupplierBO.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ADOService.cs" />
+    <Compile Include="Services\EFService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ADO.NET\ADO.NET.csproj">
+      <Project>{8d18cf87-7c9f-4343-8687-bd156e8a6586}</Project>
+      <Name>ADO.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFDAL\EFDAL.csproj">
+      <Project>{33be3022-739a-49b8-94ec-cb3b38dded2e}</Project>
+      <Name>EFDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

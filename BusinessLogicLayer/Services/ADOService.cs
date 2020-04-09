@@ -85,6 +85,7 @@ namespace BusinessLogicLayer.Services
 
         public void Dispose()
         {
+            Console.WriteLine("ww");
             UnitOfWork.Dispose();
         }
 

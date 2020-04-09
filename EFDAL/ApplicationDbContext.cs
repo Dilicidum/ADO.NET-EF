@@ -8,7 +8,7 @@ using System.Data.Entity;
 using EFDAL.Configures;
 namespace EFDAL
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext//context
     {
         public ApplicationDbContext() : base("DefaultConnection")
         {

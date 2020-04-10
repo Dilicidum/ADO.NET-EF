@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ADO.NET.Models;
 namespace ADO.NET.ADO
 {
-    public class ADOUnitOfWork
+    public class ADOUnitOfWork:IUnitOfWork
     {
         private GoodsDAL goodRepository;
         private SupplierDAL supplierRepository;

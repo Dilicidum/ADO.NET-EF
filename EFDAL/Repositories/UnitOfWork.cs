@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using EFDAL.Models;
 using EFDAL.Repositories;
-
+using EFDAL.Interfaces;
 namespace EFDAL.Repositories
 {
-    public class UnitOfWork:IDisposable
+    public class UnitOfWork:IUnitOfWork
     {
         private ApplicationDbContext _context;
         private readonly GenericRepository<Category> _categoryRepository;

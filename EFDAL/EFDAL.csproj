@@ -60,6 +60,7 @@
     <Compile Include="Configures\GoodConfiguration.cs" />
     <Compile Include="Configures\SupplierConfiguration.cs" />
     <Compile Include="Interfaces\IGenericRepository.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Good.cs" />
     <Compile Include="Models\Supplier.cs" />

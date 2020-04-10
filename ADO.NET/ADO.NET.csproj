@@ -59,6 +59,7 @@
     <Compile Include="ADO\DbCategoryDAL.cs" />
     <Compile Include="ADO\DbGoodsDAL.cs" />
     <Compile Include="ADO\IDataGateway.cs" />
+    <Compile Include="ADO\IUnitOfWork.cs" />
     <Compile Include="ADO\SupplierDAL.cs" />
     <Compile Include="ADO\UnitOfWork.cs" />
     <Compile Include="Models\CategoryOfGoods.cs" />

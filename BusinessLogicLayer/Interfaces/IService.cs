@@ -10,12 +10,12 @@ namespace BusinessLogicLayer.Interfaces
 {
     public interface IService
     {
-        IEnumerable<GoodBO> GetGoodsByCategory(string category);
-        IEnumerable<SupplierBO> GetSupplierByCategory(string category);
-        IEnumerable<GoodBO> GetGoodsBySupplier(string supplierName);
-        IEnumerable<GoodBO> GetGoodsWithSpecifiedPrice(decimal Price);
-        GoodBO GetGoodWithMinPriceByCategory(string category);
-        GoodBO GetGoodWithMaxPriceByCategory(string category);
+        IEnumerable<GoodBO> EFGetGoodsByCategory(string category);
+        IEnumerable<SupplierBO> EFGetSupplierByCategory(string category);
+        IEnumerable<GoodBO> EFGetGoodsBySupplier(string supplierName);
+        IEnumerable<GoodBO> EFGetGoodsWithSpecifiedPrice(decimal Price);
+        GoodBO EFGetGoodWithMinPriceByCategory(string category);
+        GoodBO EFGetGoodWithMaxPriceByCategory(string category);
         void Dispose();
     }
 }
